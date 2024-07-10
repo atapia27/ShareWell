@@ -1,6 +1,6 @@
 // pages/blue.tsx
 import React from 'react';
-import Modal from '../components/modal';
+import Modal from '../components/Modal';
 import { useModalStore } from '../store/modalStore';
 
 const BluePage: React.FC = () => {

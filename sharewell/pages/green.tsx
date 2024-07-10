@@ -1,6 +1,6 @@
 // pages/green.tsx
 import React from 'react';
-import Modal from '../components/modal'
+import Modal from '../components/Modal';
 import { useModalStore } from '../store/modalStore';
 
 const GreenPage: React.FC = () => {

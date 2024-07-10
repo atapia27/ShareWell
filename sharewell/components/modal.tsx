@@ -1,6 +1,8 @@
 // components/Modal.tsx
 import React from 'react';
-import { useModalStore } from '../store/modalStore'
+import { useModalStore } from '../store/modalStore';
+import ModalComplete from './ModalParts/ModalComplete';
+
 
 const Modal: React.FC<{ modalNumber: number; children: React.ReactNode }> = ({ modalNumber, children }) => {
   const { activeModal, setActiveModal } = useModalStore();
@@ -9,9 +11,12 @@ const Modal: React.FC<{ modalNumber: number; children: React.ReactNode }> = ({ m
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50" onClick={() => setActiveModal(null)}>
-      <div className="bg-white p-4 rounded" onClick={(e) => e.stopPropagation()}>
-        {children}
-        <button onClick={() => setActiveModal(null)}>Close</button>
+      <div
+        className="flex flex-col items-center bg-white"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <ModalComplete />
+
       </div>
     </div>
   );

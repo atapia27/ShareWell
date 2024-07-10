@@ -1,6 +1,6 @@
 // pages/red.tsx
 import React from 'react';
-import Modal from '../components/modal';
+import Modal from '../components/Modal';
 import { useModalStore } from '../store/modalStore';
 
 const RedPage: React.FC = () => {
