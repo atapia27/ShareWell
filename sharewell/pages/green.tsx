@@ -1,23 +1,22 @@
 // pages/green.tsx
-import React from 'react';
-import Modal from '../components/Modal';
-import { useModalStore } from '../store/modalStore';
+import Modal from "../components/Modal";
+import { NextPage } from "next";
+import {
+  ButtonOptionOne,
+  ButtonOptionTwo,
+} from "../components/Buttons";
+import PageURL from "../utils/PageURL"
 
-const GreenPage: React.FC = () => {
-  const { setActiveModal } = useModalStore();
-
+const GreenPage: NextPage = () => {
   return (
     <div className="min-h-screen bg-green-500 text-white p-8">
-      <h1 className="text-4xl">GREEN</h1>
-      <button className="mt-4" onClick={() => setActiveModal(1)}>Open Modal 1</button>
-      <button className="mt-4" onClick={() => setActiveModal(2)}>Open Modal 2</button>
-
-      <Modal modalNumber={1}>
-        <div>Content for Modal 1</div>
-      </Modal>
-      <Modal modalNumber={2}>
-        <div>Content for Modal 2</div>
-      </Modal>
+      <h1 className="text-4xl">{PageURL()}</h1>
+      <div className="mt-4">
+        <ButtonOptionOne modalNumber={1} />
+        <ButtonOptionTwo modalNumber={2} />
+      </div>
+        <Modal modalNumber={1}/>
+        <Modal modalNumber={2}/>
     </div>
   );
 };

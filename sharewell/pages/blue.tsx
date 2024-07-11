@@ -1,23 +1,22 @@
 // pages/blue.tsx
-import React from 'react';
-import Modal from '../components/Modal';
-import { useModalStore } from '../store/modalStore';
+import Modal from "../components/Modal";
+import { NextPage } from "next";
+import {
+  ButtonOptionOne,
+  ButtonOptionTwo,
+} from "../components/Buttons";
+import PageURL from "../utils/PageURL"
 
-const BluePage: React.FC = () => {
-  const { setActiveModal } = useModalStore();
-
+const BluePage: NextPage = () => {
   return (
     <div className="min-h-screen bg-blue-500 text-white p-8">
-      <h1 className="text-4xl">BLUE</h1>
-      <button className="mt-4" onClick={() => setActiveModal(2)}>Open Modal 2</button>
-      <button className="mt-4" onClick={() => setActiveModal(3)}>Open Modal 3</button>
-
-      <Modal modalNumber={2}>
-        <div>Content for Modal 2</div>
-      </Modal>
-      <Modal modalNumber={3}>
-        <div>Content for Modal 3</div>
-      </Modal>
+      <h1 className="text-4xl">{PageURL()}</h1>
+      <div className="mt-4">
+        <ButtonOptionOne modalNumber={2} />
+        <ButtonOptionTwo modalNumber={3} />
+      </div>
+        <Modal modalNumber={2}/>
+        <Modal modalNumber={3}/>
     </div>
   );
 };

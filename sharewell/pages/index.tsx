@@ -1,6 +1,5 @@
-import React from 'react';
-
-const LandingPage: React.FC = () => {
+import { NextPage } from 'next';
+const Home: NextPage = () => {
     return (
         <div>
             <h1>Welcome to ShareWell!</h1>
@@ -14,4 +13,4 @@ const LandingPage: React.FC = () => {
     );
 };
 
-export default LandingPage;
+export default Home;

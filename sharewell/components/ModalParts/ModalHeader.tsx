@@ -1,42 +1,76 @@
+// components/ModalHeader.tsx
 /* eslint-disable @next/next/no-img-element */
-  // components/ModalHeader.tsx
-  import React from 'react';
 
-  const ModalHeader: React.FC = () => {
-    return (
-      
-      <div className="flex h-[224px] justify-center items-center gap-[10px] self-stretch bg-[#687CEB] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] relative">
-        {/* Name & Date */}
-        <div className="flex flex-col items-start gap-[12px] absolute left-[48px] bottom-[43px]">
-          {/* Headline Frame */}
-          <div className="flex items-center gap-[106px]">
-            {/* Headline */}
-            <div className="w-[396px] text-white font-medium text-[32px] leading-[140%]">
-              Modal 1
-            </div>
-          </div>
-          {/* Paragraph One */}
-          <div className="text-white font-medium text-[14px] leading-[140%]">
-            Lorem Ipsum is simply
-          </div>
-          {/* Paragraph Two */}
-          <div className="text-white font-medium text-[16px] leading-[140%]">
-            Thursday, Jun 22, 2024<br />
-            06:00pm - 07:30pm EST
+import React from "react";
+
+// Define the variants for the ModalHeader component
+const HEADER_VARIANTS = {
+  1: {
+    modal: "Modal 1",
+    // weird character in figma file, replaced it with a space: "Ipsum is"
+    paragraph: "Lorem Ipsum is simply",
+    date: (
+      <>
+        Thursday, Jun 22, 2024 <br /> 06:00pm - 07:30pm EST
+      </>
+    ),
+  },
+  2: {
+    modal: "Modal 2",
+    paragraph: "Lorem Ipsum is fun",
+    date: (
+      <>
+        Friday, Jun 04, 2023 <br /> 09:00pm - 09:30pm PST
+      </>
+    ),
+  },
+  3: {
+    modal: "Modal 3",
+    paragraph: "Lorem Ipsum is wack",
+    date: (
+      <>
+        Wednesday, Jun 21, 2023 <br /> 07:00pm - 07:30pm EST
+      </>
+    ),
+  },
+};
+
+// Define the props for the ModalHeader component
+interface ModalHeaderProps {
+  variant: keyof typeof HEADER_VARIANTS; // Define a prop named variant
+}
+
+const ModalHeader: React.FC<ModalHeaderProps> = ({ variant }) => {
+  const { modal, paragraph, date } = HEADER_VARIANTS[variant]; // Destructure the selected variant
+
+  return (
+
+    <div className="flex h-56 justify-center items-center gap-[0.625rem] self-stretch bg-sw-purple shadow-sw-shadow relative">
+      <div className="flex flex-col items-start gap-3 absolute left-12 bottom-[2.6875rem  ]">
+        <div className="flex items-center gap-[6.625rem]">
+          {/* w-full implied */}
+          <div className="text-sw-white text-[2rem] font-medium leading-[140%]">
+            {modal}
           </div>
         </div>
-        {/* Logo 
+        <div className="text-sw-white text-sm font-medium leading-[140%]">
+          {paragraph}
+        </div>
+        <div className="text-sw-white text-base font-medium leading-[140%]">
+          {date}
+        </div>
+      </div>
+      {/* Logo 
         
         if using logo.svg from figma, h-[224px] is default, and correct sizing as using individual elements
         */}
-        
-          <img className="flex justify-center items-center absolute right-0 bottom-0"
-                src="/icon.svg" 
-                alt="iconFull"  
-              />
+      <img
+        className="flex justify-center items-center absolute right-0 bottom-0"
+        src="/sw_logo.svg"
+        alt="sw-logo"
+      />
+    </div>
+  );
+};
 
-      </div>
-    );
-  };
-
-  export default ModalHeader;
+export default ModalHeader;

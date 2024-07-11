@@ -1,23 +1,22 @@
 // pages/red.tsx
-import React from 'react';
-import Modal from '../components/Modal';
-import { useModalStore } from '../store/modalStore';
+import Modal from "../components/Modal";
+import { NextPage } from "next";
+import {
+  ButtonOptionOne,
+  ButtonOptionTwo,
+} from "../components/Buttons";
+import PageURL from "../utils/PageURL"
 
-const RedPage: React.FC = () => {
-  const { setActiveModal } = useModalStore();
-
+const RedPage: NextPage = () => {
   return (
     <div className="min-h-screen bg-red-500 text-white p-8">
-      <h1 className="text-4xl">RED</h1>
-      <button className="mt-4" onClick={() => setActiveModal(1)}>Open Modal 1</button>
-      <button className="mt-4" onClick={() => setActiveModal(3)}>Open Modal 3</button>
-
-      <Modal modalNumber={1}>
-        <div>Content for Modal 1</div>
-      </Modal>
-      <Modal modalNumber={3}>
-        <div>Content for Modal 3</div>
-      </Modal>
+      <h1 className="text-4xl">{PageURL()}</h1>
+      <div className="mt-4">
+        <ButtonOptionOne modalNumber={1} />
+        <ButtonOptionTwo modalNumber={3} />
+      </div>
+        <Modal modalNumber={1}/>
+        <Modal modalNumber={3}/>
     </div>
   );
 };
