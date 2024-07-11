@@ -8,78 +8,17 @@ const BODY_ONE_VARIANTS = {
   1: {
     P1_styling: "text-sw-charcoal text-sm font-normal sm:font-medium md:font-normal",
     P2_styling: "text-sw-purple font-bold",
-    // P1_styling
-    // /* Typography/14px reg */
-    // font-size: 14px;
-    // font-weight: 400;
-    // line-height: 140%; /* 19.6px */
-    // WEB
-    // font-weight: 400;
-    // TABLET 
-    // font-weight: 500;
-    // MOBILE
-    // font-weight: 400;
-
-    // P2_styling
-    // WEB
-    // TABLET
-    // MOBILE
-    // font-size: 16px;
-    // font-weight: 700;
-    // line-height: 140%; /* 22.4px */
   
   },
   2: {
     P1_styling: "text-sw-charcoal text-sm font-medium",
     P2_styling: "text-sw-charcoal sm:text-sw-purple font-bold md:font-medium",
-    // P1_styling
-    // /* Typography/14px */
-    // font-size: 14px;
-    // font-weight: 500;
-    // line-height: 140%; /* 19.6px */
-
-    // P2_styling:
-    // /* Typography/16px */
-    // font-size: 16px;
-    // WEB
-    // font-weight: 500;
-    // line-height: 140%; /* 22.4px */
-    // TABLET
-    // fon-weight: 700
-    // MOBILE
-    // font-weight: 700;
 
   },
   3: {
     P1_styling: "text-sw-purple sm: text-sw-charcoal font-medium sm:font-normal text-sm md:text-base md:uppercase",
     P2_styling: "text-sw-charcoal sm:text-sw-purple font-medium sm:font-semibold	",
-    // P1_styling
-    // /* Typography/16 CAPS */
-    // WEB
-    // font-size: 16px;
-    // font-weight: 400;
-    // line-height: 140%; /* 22.4px */
-    // text-transform: uppercase;
-    // TABLET
-    // font-size: 14px;
-    // font-style: normal;
-    // font-weight: 400;
-    // line-height: 140%; /* 19.6px */
-    // MOBILE
-    // color: var(--Colours-purple, #687CEB);
-    // /* Typography/14px */
-    // font-family: Poppins;
-    // font-size: 14px;
-    // font-style: normal;
-    // font-weight: 500;
-    // line-height: 140%; /* 19.6px */
 
-
-    // P2_styling:
-    // /* Typography/16px bold */
-    // font-size: 16px;
-    // font-weight: 600;
-    // line-height: 140%; /* 22.4px */
   },
 };
 
