@@ -15,7 +15,7 @@ const RedPage: NextPage = () => {
   return (
     <div className="min-h-[200vh] bg-red-500 text-white p-8">
       <h1 className="text-4xl">{PageURL()}</h1>
-      <div className="mt-4">
+      <div className="mt-4 gap-20 flex">
         <ButtonOptionOne modalNumber={firstModal} />
         <ButtonOptionTwo modalNumber={secondModal} />
       </div>

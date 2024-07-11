@@ -28,12 +28,12 @@ const Modal: React.FC<ModalProps> = ({ modalNumber }) => {
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   return (
     <div
-      className="rounded-xl fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
       onClick={() => setActiveModal(null)}
     >
-      {/* For now, we will say that the popup should be 50% of screen, to make it readable and accessible */}
+      {/* Ratio size of web modal is around 3:1, or 2.8:1*/}
       <div
-        className="flex flex-col items-center h-[80vh] w-[50vw] overflow-hidden rounded-xl bg-white"
+        className=" max-h-[80vh] w-[90vw] sm:w-[60vw] md:w-[50vw] flex flex-col items-center overflow-hidden rounded-xl bg-white"
         onClick={(e) => e.stopPropagation()}
       >
         <ModalHeader variant={modalVariant} />        

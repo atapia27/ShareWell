@@ -49,10 +49,11 @@ const Color: NextPage = () => {
   return (
     <div className={combinedStyle}>
       <h1 className="text-4xl">{PageURL()}</h1>
-      <div className="mt-4">
+      <div className="mt-4 gap-20 flex">
         Any Modal Outside of <br/>
         Modal 1 | Modal 2 | Modal 3 <br/>
         will default to Modal 1
+        <InputForm />
         <InputForm />
       </div>
     </div>
