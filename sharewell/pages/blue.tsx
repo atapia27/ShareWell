@@ -19,8 +19,7 @@ const BluePage: NextPage = () => {
         <ButtonOptionOne modalNumber={firstModal} />
         <ButtonOptionTwo modalNumber={secondModal} />
       </div>
-        <Modal modalNumber={firstModal}/>
-        <Modal modalNumber={secondModal}/>
+
     </div>
   );
 };
