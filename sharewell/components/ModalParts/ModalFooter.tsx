@@ -7,17 +7,17 @@ const FOOTER_VARIANTS = {
   1: {
     textStyle: "	sm:font-normal md:font-medium",
     buttonTextStyle:
-      "font-Roboto text-base	font-medium	leading-[100%] tracking-[0.5px] sm:font-sans sm:font-semibold sm:leading-[140%]	sm:uppercase sm:tracking-normal	md:font-normal	 ",
+      "font-roboto text-base	font-medium	leading-[100%] tracking-[0.5px] sm:font-sans sm:font-semibold sm:leading-[140%]	sm:uppercase sm:tracking-normal	md:font-normal	 ",
   },
   2: {
     textStyle: "md:text-[15px]",
     buttonTextStyle:
-      "font-Roboto text-base font-medium	leading-[100%] tracking-[0.5px] sm:font-sans sm:leading-[140%] sm:tracking-normal",
+      "font-roboto text-base font-medium	leading-[100%] tracking-[0.5px] sm:font-sans sm:leading-[140%] sm:tracking-normal",
   },
   3: {
     textStyle: "",
     buttonTextStyle:
-      "font-Roboto text-base	font-medium	leading-[100%] tracking-[0.5px] sm:font-sans sm:leading-[140%] md:text-lg	md:font-normal md:leading-8 md:tracking-[0.472px]	",
+      "font-roboto text-base	font-medium	leading-[100%] tracking-[0.5px] sm:font-sans sm:leading-[140%] md:text-lg	md:font-normal md:leading-8 md:tracking-[0.472px]	",
   },
 };
 

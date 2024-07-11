@@ -21,8 +21,8 @@ const config: Config = {
         /* 
         set the default font to Poppins
         */
-        sans: ['"Poppins"', ...defaultTheme.fontFamily.sans],
-        roboto: ['"Roboto"', 'sans-serif'],
+        'sans': ['"Poppins"', ...defaultTheme.fontFamily.sans],
+        'roboto': ['"Roboto"'],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
