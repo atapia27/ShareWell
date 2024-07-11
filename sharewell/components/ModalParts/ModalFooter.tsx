@@ -59,7 +59,8 @@ const ModalFooter: React.FC<ModalFooterProps> = ({ variant }) => {
     const buttonTextStyle = twMerge(buttonBaseStyle, variantStyles.buttonTextStyle);
     
   return (
-    <div className="flex p-6 flex-col items-start gap-[0.625rem] self-stretch border-t border-solid border-sw-grey-ash">
+    // min-h-[20vh]
+    <div className="min-h-[20vh] flex p-6 flex-col items-start gap-[0.625rem] self-stretch border-t border-solid border-sw-grey-ash">
       <div className={textStyle}>Lorem Ipsum is simply dummy text.</div>
       <div className="flex py-3 px-8 justify-center items-center gap-2 self-stretch rounded-xl bg-sw-modal-footer-bg">
       <div className={buttonTextStyle}>Lorem Ipsum</div>

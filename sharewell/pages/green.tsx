@@ -13,7 +13,7 @@ const GreenPage: NextPage = () => {
   const [secondModal] = useState(2);
 
   return (
-    <div className="min-h-screen bg-green-500 text-white p-8">
+    <div className="min-h-[200vh] bg-green-500 text-white p-8">
       <h1 className="text-4xl">{PageURL()}</h1>
       <div className="mt-4">
         <ButtonOptionOne modalNumber={firstModal} />

@@ -44,8 +44,8 @@ const ModalHeader: React.FC<ModalHeaderProps> = ({ variant }) => {
   const { modal, paragraph, date } = HEADER_VARIANTS[variant]; // Destructure the selected variant
 
   return (
-
-    <div className="flex h-56 justify-center items-center gap-[0.625rem] self-stretch bg-sw-purple shadow-sw-shadow relative">
+    // min-h-[30vh]
+    <div className="min-h-[30vh] flex justify-center items-center gap-[0.625rem] self-stretch bg-sw-purple shadow-sw-shadow relative">
       <div className="flex flex-col items-start gap-3 absolute left-12 bottom-[2.6875rem  ]">
         <div className="flex items-center gap-[6.625rem]">
           {/* w-full implied */}

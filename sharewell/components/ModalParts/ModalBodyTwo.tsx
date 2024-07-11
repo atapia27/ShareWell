@@ -20,9 +20,7 @@ const BODY_TWO_VARIANTS = {
   },
   3: {
     textStyle: "font-medium",
-    content:
-      "Lorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-
+    content: "Lorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
     // font-weight: 500;
   },
 };
@@ -42,7 +40,9 @@ const ModalBodyTwo: React.FC<ModalBodyTwoProps> = ({ variant }) => {
   const content = variantStyles.content;
 
   return (
-    <div className="flex px-6 pt-4 pb-6 flex-col justify-center items-start gap-4 self-stretch">
+    // <div className="flex px-6 pt-4 pb-6 flex-col justify-center items-start gap-4 self-stretch overflow-y-scroll">
+    // min-h-[30vh]
+    <div className="min-h-[20vh] flex px-6 pt-4 pb-6 flex-col justify-center items-start gap-4 self-stretch overflow-y-auto">
       <div className={textStyle}>{content}</div>
     </div>
   );

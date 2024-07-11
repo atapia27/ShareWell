@@ -4,6 +4,7 @@ import { InputForm } from "@/components/InputForm";
 import {PageURL, PageURLtoLower} from "../../utils/PageURL"
 import { twMerge } from "tailwind-merge";
 
+//const COLOR_STYLES: { [key: string]: string }
 const COLOR_STYLES: { [key: string]: string } = {
   default: "bg-red-500",
   rose: "bg-rose-500",
@@ -41,7 +42,7 @@ const Color: NextPage = () => {
     return isValidColor(color) ? COLOR_STYLES[color] : COLOR_STYLES.default;
   };
 
-  const baseStyle = "min-h-screen text-white p-8";
+  const baseStyle = "min-h-[200vh] text-white p-8";
   const colorStyle = getColorStyle(PageURLtoLower());
   const combinedStyle = twMerge(baseStyle, colorStyle);
 
@@ -49,6 +50,9 @@ const Color: NextPage = () => {
     <div className={combinedStyle}>
       <h1 className="text-4xl">{PageURL()}</h1>
       <div className="mt-4">
+        Any Modal Outside of <br/>
+        Modal 1 | Modal 2 | Modal 3 <br/>
+        will default to Modal 1
         <InputForm />
       </div>
     </div>

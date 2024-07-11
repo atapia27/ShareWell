@@ -31,8 +31,9 @@ const Modal: React.FC<ModalProps> = ({ modalNumber }) => {
       className="rounded-xl fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
       onClick={() => setActiveModal(null)}
     >
+      {/* For now, we will say that the popup should be 50% of screen, to make it readable and accessible */}
       <div
-        className="flex flex-col items-center w-[640px] overflow-hidden rounded-xl bg-white"
+        className="flex flex-col items-center h-[80vh] w-[50vw] overflow-hidden rounded-xl bg-white"
         onClick={(e) => e.stopPropagation()}
       >
         <ModalHeader variant={modalVariant} />        
