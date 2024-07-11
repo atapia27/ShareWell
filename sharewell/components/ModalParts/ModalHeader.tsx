@@ -3,7 +3,7 @@
 
 import React from "react";
 
-// Define the variants for the ModalHeader component
+// const HEADER_VARIANTS: { [key: number]: {modal: string, paragraph: string, date: JSX.Element} } = {
 const HEADER_VARIANTS = {
   1: {
     modal: "Modal 1",

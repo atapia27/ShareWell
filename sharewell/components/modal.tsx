@@ -11,8 +11,10 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ modalNumber }) => {
+
   const { activeModal, setActiveModal } = useModalStore();
 
+  ///////////////////////////////////////// this can be moved to a helper file ?/////////////////////////////////////////
   // If the active modal is not the current modal, return null
   if (activeModal !== modalNumber) return null;
 
@@ -23,7 +25,7 @@ const Modal: React.FC<ModalProps> = ({ modalNumber }) => {
 
   // Default to modal 1 if the number is invalid
   const modalVariant = isValidVariant(modalNumber) ? modalNumber : 1; 
-
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   return (
     <div
       className="rounded-xl fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"

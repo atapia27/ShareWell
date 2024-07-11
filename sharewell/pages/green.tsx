@@ -5,18 +5,22 @@ import {
   ButtonOptionOne,
   ButtonOptionTwo,
 } from "../components/Buttons";
-import PageURL from "../utils/PageURL"
+import {PageURL} from "../utils/PageURL"
+import { useState } from "react";
 
 const GreenPage: NextPage = () => {
+  const [firstModal] = useState(1);
+  const [secondModal] = useState(2);
+
   return (
     <div className="min-h-screen bg-green-500 text-white p-8">
       <h1 className="text-4xl">{PageURL()}</h1>
       <div className="mt-4">
-        <ButtonOptionOne modalNumber={1} />
-        <ButtonOptionTwo modalNumber={2} />
+        <ButtonOptionOne modalNumber={firstModal} />
+        <ButtonOptionTwo modalNumber={secondModal} />
       </div>
-        <Modal modalNumber={1}/>
-        <Modal modalNumber={2}/>
+        <Modal modalNumber={firstModal}/>
+        <Modal modalNumber={secondModal}/>
     </div>
   );
 };

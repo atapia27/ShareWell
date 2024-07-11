@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 import React from "react";
 import Image from "next/image";
 
+// const BODY_ONE_VARIANTS: { [key: number]: {P1_styling: string, P2_styling: string} } = {
 const BODY_ONE_VARIANTS = {
   1: {
     P1_styling: "text-sm font-normal leading-[140%]",

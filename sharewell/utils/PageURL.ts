@@ -8,8 +8,13 @@ They are an integral part of the Server Components architecture.
  
 import { usePathname } from 'next/navigation'
  
-export default function PageURL(): string{
+export function PageURL(): string{
   const pathname = usePathname()
   const isPathname = pathname ? pathname.split('/').pop() : ''
   return isPathname ? isPathname.toUpperCase() : '';
+}
+
+export function PageURLtoLower(): string {
+  const url = PageURL();
+  return url.toLowerCase();
 }

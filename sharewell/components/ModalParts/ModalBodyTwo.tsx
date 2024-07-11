@@ -2,6 +2,7 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
+// const BODY_TWO_VARIANTS: { [key: number]: {textStyle: string, content: string} } = {
 const BODY_TWO_VARIANTS = {
   1: {
     textStyle: "font-normal",

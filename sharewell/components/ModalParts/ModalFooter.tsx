@@ -2,6 +2,7 @@
 import React from 'react';
 import { twMerge } from "tailwind-merge";
 
+// const FOOTER_VARIANTS: { [key: number]: {textStyle: string, buttonTextStyle: string} } = {
 const FOOTER_VARIANTS = {
   1: {
     textStyle: "text-sm ",

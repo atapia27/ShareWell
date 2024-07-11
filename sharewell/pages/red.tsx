@@ -5,18 +5,22 @@ import {
   ButtonOptionOne,
   ButtonOptionTwo,
 } from "../components/Buttons";
-import PageURL from "../utils/PageURL"
+import {PageURL} from "../utils/PageURL"
+import { useState } from "react";
 
 const RedPage: NextPage = () => {
+  const [firstModal] = useState(1);
+  const [secondModal] = useState(3);
+
   return (
     <div className="min-h-screen bg-red-500 text-white p-8">
       <h1 className="text-4xl">{PageURL()}</h1>
       <div className="mt-4">
-        <ButtonOptionOne modalNumber={1} />
-        <ButtonOptionTwo modalNumber={3} />
+        <ButtonOptionOne modalNumber={firstModal} />
+        <ButtonOptionTwo modalNumber={secondModal} />
       </div>
-        <Modal modalNumber={1}/>
-        <Modal modalNumber={3}/>
+        <Modal modalNumber={firstModal}/>
+        <Modal modalNumber={secondModal}/>
     </div>
   );
 };
