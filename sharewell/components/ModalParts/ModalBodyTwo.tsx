@@ -23,7 +23,7 @@ const BODY_TWO_VARIANTS = {
   },
   3: {
     textStyle: "text-base font-medium	sm:text-sm",
-    content: "Lorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+    content: "Lorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velitLorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velitLorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velitLorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velitLorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velitLorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velitLorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velitLorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
     // font-weight: 500;
   },
 };
@@ -38,7 +38,7 @@ interface ModalBodyTwoProps {
 
 const ModalBodyTwo: React.FC<ModalBodyTwoProps> = ({ variant }) => {
   // Define base styles
-  const baseStyle = "text-sw-black leading-[140%] self-stretch overflow-y-auto sm:overflow-scroll";
+  const baseStyle = "text-sw-black leading-[140%] self-stretch overflow-y-auto sm:overflow-y-scroll";
   // Define the variant styles
   const variantStyles = BODY_TWO_VARIANTS[variant];
 
@@ -47,7 +47,8 @@ const ModalBodyTwo: React.FC<ModalBodyTwoProps> = ({ variant }) => {
 
   return (
     // Overflow not shown in mobile
-    <div className=" flex px-6 pt-4 pb-6 flex-col justify-center items-start gap-4 self-stretch overflow-y-auto sm:overflow-scroll">
+    // min-h mobile
+    <div className="min-h-[2.5rem] flex px-6 pt-4 pb-6 flex-col justify-center items-start gap-4 self-stretch">
       <div className={textStyle}>{content}</div>
     </div>
   );

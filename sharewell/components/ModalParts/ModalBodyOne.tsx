@@ -100,8 +100,8 @@ const ModalBodyOne: React.FC<ModalBodyOneProps> = ({ variant }) => {
   const textStyleP2 = twMerge(baseStyleP2, variantStyles.P2_styling);
 
   return (
-    // min-h-[15vh]
-    <div className="flex px-6 pt-6 items-center gap-[0.625rem] self-stretch justify-between">
+    // min-h mobile
+    <div className=" flex px-6 pt-6 items-center gap-[0.625rem] self-stretch justify-between">
       {/* state width to match design */}
       <div className=" flex flex-col items-start gap-1 w-2/3 overflow-y-hidden sm:self-stretch">
         <div className={textStyleP1}>Lorem Ipsum</div>
