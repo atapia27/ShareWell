@@ -19,7 +19,6 @@ const GreenPage: NextPage = () => {
         <ButtonOptionOne modalNumber={firstModal} />
         <ButtonOptionTwo modalNumber={secondModal} />
       </div>
-
     </div>
   );
 };
